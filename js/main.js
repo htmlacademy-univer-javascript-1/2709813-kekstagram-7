@@ -84,5 +84,3 @@ const photos = Array.from(
   { length: 25 },
   (_, index) => createPhoto(index + 1)
 );
-
-console.log(photos);
