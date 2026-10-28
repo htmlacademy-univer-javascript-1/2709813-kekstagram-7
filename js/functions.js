@@ -12,3 +12,7 @@ const extractDigits = (input) => {
 
   return digits ? parseInt(digits.join(''), 10) : NaN;
 };
+
+void checkStringLength;
+void isPalindrome;
+void extractDigits;
