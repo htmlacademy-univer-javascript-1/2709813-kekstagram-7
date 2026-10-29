@@ -16,17 +16,6 @@ const extractDigits = (input) => {
   return digits ? parseInt(digits.join(''), 10) : NaN;
 };
 
-// 4. Проверка укладывается ли встреча в рабочий день
-const convertTimeToMinutes = (timeString) => {
-  const [hours, minutes] = timeString.split(':').map(Number);
-  return hours * 60 + minutes;
-};
-
-const checkMeetingTime = (workDayStart, workDayEnd, meetingStart, meetingDuration) => {
-  const startWorkMinutes = convertTimeToMinutes(workDayStart);
-  const endWorkMinutes = convertTimeToMinutes(workDayEnd);
-  const startMeetingMinutes = convertTimeToMinutes(meetingStart);
-  const endMeetingMinutes = startMeetingMinutes + meetingDuration;
-
-  return startMeetingMinutes >= startWorkMinutes && endMeetingMinutes <= endWorkMinutes;
-};
+void checkStringLength;
+void isPalindrome;
+void extractDigits;

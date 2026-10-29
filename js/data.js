@@ -1,5 +1,3 @@
-// js/data.js
-
 import { getRandomInteger } from './util.js';
 
 const COMMENT_MESSAGES = [
@@ -32,6 +30,8 @@ const DESCRIPTIONS = [
   'Летний вечер',
   'Незабываемое путешествие'
 ];
+
+const PHOTOS_COUNT = 25;
 
 const createMessage = () => {
   const firstMessage = COMMENT_MESSAGES[
@@ -77,7 +77,9 @@ const createPhoto = (id) => ({
   )
 });
 
-export const createPhotos = () => Array.from(
-  { length: 25 },
+const createPhotos = () => Array.from(
+  { length: PHOTOS_COUNT },
   (_, index) => createPhoto(index + 1)
 );
+
+export { createPhotos };
