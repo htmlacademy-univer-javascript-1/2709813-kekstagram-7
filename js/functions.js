@@ -19,3 +19,4 @@ const extractDigits = (input) => {
 void checkStringLength;
 void isPalindrome;
 void extractDigits;
+/// module5-task2
