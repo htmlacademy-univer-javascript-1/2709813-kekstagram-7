@@ -1,3 +1,6 @@
+import { initScale, resetScale } from './scale.js';
+import { initEffects, resetEffects } from './effects.js';
+
 const MAX_HASHTAGS = 5;
 const MAX_COMMENT_LENGTH = 140;
 const HASHTAG_REGEX = /^#[a-zа-яё0-9]{1,19}$/i;
@@ -102,6 +105,8 @@ const onFormSubmit = (evt) => {
 };
 
 function openUploadForm() {
+  resetScale();
+  resetEffects();
   overlayElement.classList.remove('hidden');
   bodyElement.classList.add('modal-open');
   document.addEventListener('keydown', onDocumentKeydown);
@@ -114,10 +119,15 @@ function closeUploadForm() {
 
   uploadFormElement.reset();
   fileInputElement.value = '';
+  resetScale();
+  resetEffects();
   pristine.reset();
 }
 
 const initUploadForm = () => {
+  initScale();
+  initEffects();
+
   fileInputElement.addEventListener('change', onFileInputChange);
   cancelButtonElement.addEventListener('click', onCancelButtonClick);
   hashtagsInputElement.addEventListener('keydown', onTextFieldKeydown);
